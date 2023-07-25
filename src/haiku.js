@@ -9,6 +9,6 @@ export class HaikuChecker {
         if (lines.length === 3); {
             return true;
         }
-        return false;
-    }
-}
+            return false;
+    };
+};
