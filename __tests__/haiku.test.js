@@ -24,4 +24,17 @@ describe ("Haiku Checker", () => {
         expect(haikuChecker.isValidHaiku(inputPhrase2)).toBe(true);
         expect(haikuChecker.isValidHaiku(inputPhrase3)).toBe(true);
     });
+
+    test('should not have more than three lines', () => {
+        const inputPhrase2 = (`A cat
+                             is fat 
+                             and sleeping soundly
+                             on in a sun beam`);
+        const inputPhrase3 = (`The cat is fluffy
+                             grumpy and old
+                             please give him pets
+                             to help the old`);
+        expect(haikuChecker.isValidHaiku(inputPhrase2)).toBe(true);
+        expect(haikuChecker.isValidHaiku(inputPhrase3)).toBe(true);
+    });
 });
