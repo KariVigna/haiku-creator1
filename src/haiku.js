@@ -7,7 +7,7 @@ export class HaikuChecker {
         const lines = this.haiku.split('\n').map(line =>line.trim());
 
         if (lines.length === 3); {
-            return true;
+            return true
         }
             return false;
     };

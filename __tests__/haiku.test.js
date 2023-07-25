@@ -16,4 +16,12 @@ describe ("Haiku Checker", () => {
         very high`);
         expect(haikuChecker.isValidHaiku(inputPhrase1)).toBe(true);
     });
+    
+    test('should not have less than three lines', () => {
+        const inputPhrase2 = (`A cat
+                            is fat`);
+        const inputPhrase3 = (`The cat is fluffy`);
+        expect(haikuChecker.isValidHaiku(inputPhrase2)).toBe(true);
+        expect(haikuChecker.isValidHaiku(inputPhrase3)).toBe(true);
+    });
 });
