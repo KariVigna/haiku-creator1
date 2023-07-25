@@ -37,4 +37,15 @@ describe ("Haiku Checker", () => {
         expect(haikuChecker.isValidHaiku(inputPhrase2)).toBe(true);
         expect(haikuChecker.isValidHaiku(inputPhrase3)).toBe(true);
     });
+
+    test('should count syllables correctly', () => { 
+
+        expect(haikuChecker.countSyllables('A cat')).toBe(2);
+        expect(haikuChecker.countSyllables('can meow')).toBe(2);
+        expect(haikuChecker.countSyllables('And within every rain drop')).toBe(7);
+        expect(haikuChecker.countSyllables('A world of giggles')).toBe(5);
+        expect(haikuChecker.countSyllables("")).toBe(0);
+        expect(haikuChecker.countSyllables('123')).toBe(0);
+        expect(haikuChecker.countSyllables('342$#!@$%')).toBe(0);
+    });
 });
